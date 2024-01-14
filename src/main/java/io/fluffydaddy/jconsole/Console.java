@@ -16,10 +16,15 @@
 
 package io.fluffydaddy.jconsole;
 
-public interface Console extends Runnable {
+import io.fluffydaddy.jutils.queue.ByteQueueListener;
+import io.fluffydaddy.jreactive.DataSubscriber;
+
+public interface Console extends DataSubscriber<ConsoleListener>, ByteQueueListener, Runnable {
     void start();
     
     void await();
     
     boolean isAlive();
+    
+    void notifyData(CharSequence text, int off, int len, boolean error);
 }

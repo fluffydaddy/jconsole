@@ -16,6 +16,11 @@
 
 package io.fluffydaddy.jconsole;
 
+import java.io.InputStream;
+
 public interface ConsoleListener {
-	void onInput(String str, boolean error);
+	// text - что пришло; elapsedTime Сколько прошло времени после начала чтения из консоли.
+	void onConsole(CharSequence text, long elapsedTime, boolean error);
+	// вызывается когда консоль получила, что требует действия от пользователя.
+	void onInput(InputStream systemInput);
 }

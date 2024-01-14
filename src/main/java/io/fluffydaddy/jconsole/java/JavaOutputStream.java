@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package io.fluffydaddy.jconsole;
+package io.fluffydaddy.jconsole.java;
 
 import io.fluffydaddy.jutils.queue.ByteQueue;
 import io.fluffydaddy.jutils.queue.ByteQueueListener;
